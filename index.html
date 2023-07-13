@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SteamUp</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&display=swap" rel="stylesheet">
+  <style type="text/css">
+      html {
+          height: 100%;
+          width: 100%;
+      }
+
+      body {
+          background: url("img/login_back.jpg") no-repeat center center fixed;
+          background-size: cover;
+        
+      }
+      body, input {
+          font-family: 'Montserrat', 'NotoSansKR', sans-serif;
+      }
+      #container {
+          background: rgba(0, 0, 0, .60);
+          backdrop-filter: blur(3px);
+          width: 25rem;
+          height: 30rem;
+          margin: auto;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          border-radius: 30px;
+      }
+
+      header {
+          text-align: center;
+          vertical-align: middle;
+          line-height: 5rem;
+          height: 5rem;
+          background: rgba(0, 0, 0, .40);
+          font-size: 1.5rem;
+          color: #fff;
+          font-weight: 500;
+          border-top-right-radius: 30px;
+          border-top-left-radius: 30px;
+      }
+
+      fieldset {
+          border: 0;
+          text-align: center;
+      }
+
+      input[type="submit"] {
+          background: #DD5EC1;
+          border: 0;
+          display: block;
+          width: 80%;
+          margin: 0 auto;
+          color: #fff;
+          padding: 0.7rem;
+          cursor: pointer;
+          font-weight: 500;
+          font-size: 1.2rem;
+      }
+
+      input {
+          background: transparent;
+          width: 70%;
+          border: 0;
+          border-left: 4px solid;
+          border-color: #4FA3F0;
+          padding: 16px;
+          color: #fff;
+      }
+
+      input[type="text"]:focus,
+      input[type="email"]:focus,
+      input[type="password"]:focus {
+          outline: 0;
+          background: rgba(0, 0, 0, 0.3);
+          border-radius: 1.4rem;
+          border-color: transparent;
+      }
+
+      .radiobtn {
+        display: flex;
+        width: 80%;
+        margin: auto;
+      }
+      label > input {
+        width: auto;
+      }
+      label {
+        color: #fff;
+      }
+      label:last-child {
+        margin-left: 2rem;
+      }
+
+      ::placeholder {
+          color: #fff;
+          font-size: 1rem;
+      }
+
+      /*Media queries */
+
+      @media all and (min-width: 481px) and (max-width: 568px) {
+          #container {
+              margin-top: 10%;
+              margin-bottom: 10%;
+          }
+      }
+          @media all and (min-width: 569px) and (max-width: 768px) {
+              #container {
+                  margin-top: 5%;
+                  margin-bottom: 5%;
+              }
+          }
+   </style>
+</head>
+<body>
+      <div id="container">
+         <header>Register new account</header>
+         <form method="post">
+            <fieldset>
+               <br/>
+               <div class="radiobtn">
+                  <label><input type="radio" name="fruit" checked="checked" value="일반"/>일반</label>
+                  <label><input type="radio" name="fruit" value="강의자" /> 강의자</label>
+               </div>
+               <br/><br/>
+               <input type="text" name="ID" id="ID" placeholder="ID" required>
+               <br/><br/>
+               <input type="password" name="password" id="password" placeholder="Password" required>
+               <br/><br/>
+               <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirm Password" required>
+               <br/> <br/> <br/>
+               <label for="submit"></label>
+               <input type="submit" name="submit" id="submit" value="REGISTER">
+            </fieldset>
+         </form>
+      </div>
+   </body>
+</html>
